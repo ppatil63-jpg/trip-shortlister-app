@@ -1,0 +1,14 @@
+# Render Blueprint — one-click deploy.
+# Push this repo to GitHub, then in Render: New → Blueprint → connect repo.
+services:
+  - type: web
+    name: trip-shortlister
+    runtime: docker
+    plan: free
+    envVars:
+      - key: REDDIT_CLIENT_ID
+        sync: false
+      - key: REDDIT_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_PLACES_API_KEY
+        sync: false
